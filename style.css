@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Pixelart";
+  src: url(MinecraftSeven.woff)
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  image-rendering: pixelated;
+  
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+
+body {
+  animation: fadeIn 1s ease-out forwards;
+  font-family: Pixelart;
+  background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url(Items/FrutigerPCOriginal.png);
+
+  background-position: top;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px, 20px;
+  color: #283646;
+}
+
+.Profile {
+  padding-top: 120px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.Profilephoto img{
+  width: 50%;
+  padding-bottom: 20px;
+  transition: 50ms ease-in-out;
+}
+
+.Profilephoto :hover{
+  transform: scale(1.03);
+  transition: 80ms ease-in;
+}
+.Profiletitle h1 {
+  font-size: 35pt;
+  font-weight: 10;
+  padding-bottom: 15px;
+}
+
+.Profiletext p {
+  font-size: 20pt;
+  max-width: 600px;
+}
+
+.Links a {
+  background-image: url(Items/Button\ Original.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 20px;
+  opacity: 92%;
+   
+  display:block;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+
+  text-decoration: none;
+  padding: 35px 160px;
+  margin: 15px;
+  font-size: 23px;
+  font-weight: lighter;
+  color: #283646;
+
+  transition: 50ms ease-in-out;
+}
+
+.Links a:hover {
+  transform: scale(1.03);
+  opacity: 100%;
+  transition: 70ms ease;
+}
+
+footer {
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+}
+
+footer h2{
+  font-size: 30pt;
+  font-weight: lighter;
+  padding-top: 30px;
+}
+
+footer p{
+  font-size: 19px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    
+    body {
+    background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url('Items/FrutigerCelularOriginal.png');
+    
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    }
+
+    .Profile, .Links{
+      width: 80%;
+    }
+
+    .Profiletitle h1 {
+  font-size: 27pt;
+  font-weight: 10;
+  padding-bottom: 15px;
+  text-align: center;
+  min-width: 400px;
+}
+
+.Profiletext p {
+  font-size: 18pt;
+  max-width: 600px;
+  text-wrap: pretty;
+}
+
+.Links a {
+  padding: 28px;
+}
+
+.Profilephoto :hover, .Links a:hover{
+  transform: none;
+}
+
+.Links a :active{
+  transform: scale(1.03);
+  opacity: 100%;
+}
+  }
