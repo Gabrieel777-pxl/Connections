@@ -64,10 +64,6 @@ body {
   transition: 50ms ease-in-out;
 }
 
-.Profilephoto :hover{
-  transform: scale(1.03);
-  transition: 80ms ease-in;
-}
 .Profiletitle h1 {
   font-size: 35pt;
   font-weight: 10;
@@ -102,10 +98,16 @@ body {
   transition: 50ms ease-in-out;
 }
 
+@media (hover: hover) { /* Todos los hovers para que sirvan solo en pc */
 .Links a:hover {
   transform: scale(1.03);
   opacity: 100%;
   transition: 70ms ease;
+}
+.Profilephoto :hover{
+  transform: scale(1.03);
+  transition: 80ms ease-in;
+}
 }
 
 footer {
@@ -126,7 +128,7 @@ footer p{
   padding-bottom: 15px;
 }
 
-@media (max-width: 767px) { /* Vista en celular */
+@media (max-width: 600px) { /* Vista en celular */
     
   html, body {
     max-width: 100vw;
@@ -164,32 +166,25 @@ footer p{
 
 .Links a {
   background-image: url(Items/Button\ cel.png);
-  background-size: contain;
-  max-width: 100vh;
-  width: 100%;
-  display:block;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
-  transition: 50ms ease-in-out;
+  margin: 0px;
+  margin-bottom: 10px;
+
+  display: flex;
+  transform: scale(90%);
+  white-space: nowrap;
 }
 
 .Profilephoto img{
   width: 60%;
 }
 
-.Profilephoto :hover, .Links a:hover{
-  transform: none;
-  filter: none;
-}
-
-.Links a :active{
-  transform: scale(1.03);
-  opacity: 100%;
-  transition: 70ms ease;
-}
-  } /* Efecto Touch */
-
   footer h2{
   font-size: 28px
+} }
+
+@media (hover: none) { /* Efecto Touch en celular */
+    .Links a:active {
+        transform: scale(1.01); 
+        transition: 0.02s ease-in;
+    }
 }
