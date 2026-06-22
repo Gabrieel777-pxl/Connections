@@ -1,18 +1,23 @@
 @font-face {
   font-family: "Pixelart";
   src: url(MinecraftSeven.woff)
+   /* Esta es la fuente */
 }
 
+
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   margin:0;
   padding: 0;
   image-rendering: pixelated;
-  
+  /* Settings globales, image rendering hace que las imagenes no se pixelen, así las suba en su resolución original */
+
   scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
+     /* Quita el scrollbar */
   }
 }
 
@@ -25,17 +30,17 @@
     opacity: 1;
     transform: translateY(0);
   }
-  }
+  } /* Animación de inicio */
 
 body {
   animation: fadeIn 1s ease-out forwards;
   font-family: Pixelart;
-  background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url(Items/FrutigerPCOriginal.png);
+  background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url(Items/FrutigerPCOriginal.png); /* Hace que el fondo se vea con un "velo" */
 
-  background-position: top;
+  background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
-  background-attachment: scroll, cover;
+  background-attachment: scroll;
 
   display: flex;
   flex-direction: column;
@@ -121,8 +126,13 @@ footer p{
   padding-bottom: 15px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) { /* Vista en celular */
     
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
     body {
     background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url('Items/FrutigerCelularOriginal.png');
     
@@ -133,25 +143,29 @@ footer p{
     }
 
     .Profile, .Links{
-      width: 80%;
+      width: 85%;
     }
 
     .Profiletitle h1 {
-  font-size: 27pt;
+  font-size: 22pt;
   font-weight: 10;
   padding-bottom: 15px;
   text-align: center;
-  min-width: 400px;
+  width: 100%;
+  text-wrap: pretty;
 }
 
 .Profiletext p {
-  font-size: 18pt;
+  font-size: 16pt;
   max-width: 600px;
   text-wrap: pretty;
 }
 
 .Links a {
+  background-image: url(Items/Button\ cel.png);
   padding: 28px;
+  max-width: 100vh;
+  width: 100%;
 }
 
 .Profilephoto :hover, .Links a:hover{
