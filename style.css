@@ -38,7 +38,7 @@ body {
   background:linear-gradient(45deg, rgba(255,249,223,0.4), rgba(255,249,223,0.4)), url(Items/FrutigerPCOriginal.png); /* Hace que el fondo se vea con un "velo" */
 
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
 
@@ -135,7 +135,7 @@ footer p{
 }
 
     body {
-    background:linear-gradient(45deg, rgba(255,249,223,0.5), rgba(255,249,223,0.5)), url('Items/FrutigerCelularOriginal.png');
+    background:linear-gradient(45deg, rgba(255,249,223,0.5), rgba(255,249,223,0.6)), url(Items/FrutigerCelularOriginal.png);
     
     background-size: cover;
     background-position: top;
@@ -164,6 +164,7 @@ footer p{
 
 .Links a {
   background-image: url(Items/Button\ cel.png);
+  background-size: contain;
   max-width: 100vh;
   width: 100%;
   display:block;
@@ -190,5 +191,5 @@ footer p{
   } /* Efecto Touch */
 
   footer h2{
-  font-size: 26px
+  font-size: 28px
 }
